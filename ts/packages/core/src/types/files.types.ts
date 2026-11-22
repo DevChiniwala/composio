@@ -9,7 +9,8 @@ export type FileDownloadData = {
   mimeType: string;
   s3Url: string;
   /**
-   * @todo: actually, this can be null.
+   * The absolute path to the saved file, or `null` when the runtime has
+   * no filesystem (e.g. Cloudflare Workers) or the write failed.
    */
-  filePath: string;
+  filePath: string | null;
 };
